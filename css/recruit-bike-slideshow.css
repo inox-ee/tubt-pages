@@ -1,0 +1,27 @@
+section .bicycle_img  img{
+  max-width: 100%;
+}
+
+.bicycle_img {
+  margin: auto;
+  width: 70%;
+}
+
+section .bicycle_img ul {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+section .bicycle_img li {
+  float: left;
+  margin-right: 1%;
+  width: 24%;
+}
+section .bicycle_img li:hover {
+  outline: 2px solid #c35fda;
+  outline-offset: -1px;
+}
+section .bicycle_img .comment {
+  font-size: 1rem;
+}

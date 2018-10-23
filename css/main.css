@@ -1,0 +1,397 @@
+@charset "utf-8";
+
+/* ========== すべて共通 ========== */
+html, body {
+	font-size: 16px;
+	font-family: Yu Gothic;
+	color: #393939;
+	background: #fff;
+}
+body, div, p, h1, h2, h3, h4, ul, figure {
+	margin: 0;
+	padding: 0;
+}
+p, td, th, li {
+	line-height: 1.8;
+}
+img {
+	width: 100%;
+	height: auto;
+}
+a {
+	color: #709a00;
+}
+a:hover {
+	color: #95cd00;
+}
+a:active {
+	color: #4b6700;
+}
+.img-responsive {
+	/* display: block; */
+	max-width: 800px;;
+	height: auto;
+}
+/* 共通の見出し */
+main h1 {
+	margin-bottom: 1rem;
+	border-bottom: 1px dashed #7DB300;
+	font-weight: normal;
+	font-size: 1.6rem;
+}
+
+.container {
+	margin: 0 auto;
+	padding-left: 10px;
+	padding-right: 10px;
+	max-width: 1000px;
+}
+@media screen and (min-width: 768px) {
+	.container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+section .container {
+	display: flex;
+	flex-flow: column;
+}
+
+/* ヘッダをページ上部に固定 */
+@media screen and (min-width: 768px) {
+	.header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 60px;
+		border-bottom: 2px solid #E82E4A;
+		z-index: 999;
+			/*ページ表示の優先度。値が大きいほど前面に表示される。
+			cssアニメで作った新歓キャンプの画像がヘッダの前面に出てしまうバグは
+			recruit-campのz-index=999→100に変更することで修正。*/
+	}
+	.main,
+	.home-keyvisual {
+		margin-top: 60px;
+	}
+}
+/* ========== ヘッダー ========== */
+header {
+	background: #7dc200;
+}
+.header-inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header-logo {
+	padding: 10px 0;
+	width: 160px;
+	height: 37px;
+}
+.menu-btn {
+	padding: 10px 0;
+	border: 1px solid #fff;
+	border-radius: 4px;
+	width: 40px;
+	height: 40px;
+	background: url(../images/hamburger.png) no-repeat center center;
+	background-size: contain;
+}
+
+@media screen and (min-width: 768px) {
+	.header-logo {
+		padding: 10px 0;
+		width: 200px;
+		height: 40px;
+	}
+	.menu-btn {
+		display: none;
+	}
+}
+
+/* ========== ナビゲーション ========== */
+nav {
+	background: #393939;
+}
+@media screen and (max-width: 767px) {
+	.nav1 {
+		display: none;
+	}
+}
+.navbar {
+	display: none;
+	list-style-type: none;
+}
+.navbar a {
+	display: block;
+	padding: 0.4rem 0;
+	font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI","Noto Sans Japanese","ヒラギノ角ゴ ProN W3";
+	color: #fff;
+	text-decoration: none;
+}
+.navbar a:hover {
+	background: #7DC200;
+}
+
+@media screen and (min-width: 768px) {
+	.navbar {
+		display: flex !important;
+	}
+	.navbar li {
+		flex: 1 1 auto;
+		text-align: center;
+	}
+	.navbar li a {
+		display: block;
+		padding: 10px 15px;
+	}
+}
+
+
+/* ========== メインエリア基本レイアウト ========== */
+section .container {
+	padding-bottom: 50px;
+	background: #fff;
+}
+
+@media screen and (min-width: 768px) {
+	main {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.sidebar {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
+
+/* ========== フッター ========== */
+footer {
+	background: #7DB300;
+	font-size: 0.8rem;
+	color: #fff;
+}
+.footer-container {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.footer-nav {
+	list-style-type: none;
+}
+.footer-nav li {
+	display: inline;
+	padding: 0 1rem 0 0;
+}
+.footer-nav a {
+	color: #fff;
+	text-decoration: none;
+}
+.footer-nav a:hover {
+	opacity: 0.5;
+}
+.footer-copyright {
+	text-align: center;
+}
+
+/* ========== index トップページ ========== */
+/*HOME画像*/
+.home-keyvisual {
+	padding: 0px;
+	text-align: center;
+}
+@media screen and (min-width: 768px) {
+	.home-keyvisual {
+		padding: 0px 70px;
+	}
+}
+
+/* キャッチコピー */
+.home-maincopy {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	text-align: center;
+	font-size: 1.3rem;
+}
+.home-maincopy strong {
+	color: #7DB300;
+}
+
+@media screen and (min-width: 768px) {
+	.home-maincopy {
+		font-size: 2.4rem;
+	}
+}
+
+/* 見出し */
+.home-h2 {
+	padding-bottom: 5px;
+	margin: 30px 0 10px 0;
+	font-family: 'Krona One', sans-serif;
+	font-size: 1.3rem;
+	text-align: center;
+}
+
+/* Update */
+.home-twitter {
+	padding: 20px 30px;
+	height: 400px;
+}
+/* .home-news {
+	padding: 20px 30px;
+	border-radius: 10px;
+	background: #efefef;
+	font-size: 0.7rem;
+	list-style-type: none;
+	overflow-y: scroll;
+	height: 150px;
+} */
+.home-news li {
+	margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+	/* .home-news {
+		height: 300px;
+	} */
+  .home-twitter {
+		height: 300px;
+	}
+}
+
+/* サイドバーの設定 */
+@media screen and (min-width: 768px) {
+	section .container {
+		flex-flow: row;
+	}
+	main {
+		flex: 1 1 auto;
+	}
+	.sidebar {
+		flex: 10 0 300px;
+	}
+}
+
+/* ========== about 部活紹介 ========== */
+/* 共通 */
+.about-h2 {
+	padding-bottom: 5px;
+	margin-top: 30px;
+	font-family: 'Krona One', sans-serif;
+	font-size: 1.3rem;
+	text-align: center;
+}
+.about-h3 {
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	font-size: 0.9rem;
+	text-align: center;
+}
+
+/* 部活紹介 */
+.about-intro {
+	margin-bottom: 30px;
+}
+.intro-TUBT {
+	margin: 0 0 1em 0;
+}
+.TUBT-image {
+	float: left;
+	margin-bottom: 0.5em;
+	vertical-align: baseline;
+}
+.TUBT-wrapper {
+	overflow: hidden;
+}
+.intro-capi {
+	font-size: 1.1rem;
+	font-weight: bold;
+	color: #ACDBDA
+}
+.intro-strong {
+	font-size: 1.1rem;
+	color: #F79BB9
+}
+.intro-keysentence {
+	font-size: 1.1rem;
+	text-align: center;
+}
+.intro-keysentence img{
+	display: block;
+	width: 60%;
+	height: auto;
+	margin-left: 20%;
+	padding: 30px 0;
+}
+
+/* 活動日程 */
+.about-schdule {
+	margin-bottom: 30px;
+}
+
+/* 活動紹介 */
+.about-activity {
+	margin-bottom: 30px;
+}
+.about-activity table {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+.about-activity table caption {
+	display: none;
+}
+.campnig-type th {
+	font-weight: normal;
+	background: #ECF4D9;
+	width: 10%;
+}
+.campnig-type td:nth-child(odd) {
+	background: #ECF4D9;
+}
+.campnig-season td {
+	text-align: center;
+	font-weight: bold;
+	background: #35c528;
+	color: #fff;
+	width: 15%;
+}
+
+/* 部員紹介 */
+.table-wrapper {
+	overflow-x: auto;
+	margin-bottom: 30px;
+}
+.member-table {
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: collapse;
+	width: 670px;
+}
+.member-table tr {
+	border: 2px solid #efefef;
+}
+.member-table th {
+	background: #35c528;
+	color: #fff;
+	white-space: nowrap;
+}
+.member-table td {
+	font-size: 0.8rem;
+}
+.member-table th, td {
+	padding: 8px;
+}
+/* .girl {
+	border: 3px dashed #FF69B4;
+} */
+/* ========== recruit 新歓情報 ========== */
+/* 共通 */
+.recruit-h2 {
+	padding-bottom: 5px;
+	margin-top: 30px;
+	font-family: 'Krona One', sans-serif;
+	font-size: 1.3rem;
+	text-align: center;
+}
